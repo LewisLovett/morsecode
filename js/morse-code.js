@@ -5,4 +5,17 @@ const filterValidChars = (wordInput) => {
     return filteredWordArray;
 }
 
-lettersToMorse("bobby &&>HUdfuehgIO@~>?@:L{)");
+const translateToMorse = (charsArray) => {
+    let morseString = "";
+    charsArray.forEach(wordChar => {
+        wordChar = wordChar.toUpperCase();
+        switch(wordChar){
+            case "A":
+                morseString += ".-";
+                break;
+        }
+    });
+    return morseString;
+}
+
+console.log(translateToMorse(["A","a","&"]));
