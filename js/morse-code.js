@@ -95,7 +95,6 @@ export const validMorse = (morseInput) => {
         validInput = false;
     }
 
-
     if (validInput){
         return morstArry;
     }else{
@@ -107,7 +106,11 @@ export const translateMorseArray = (morseArray) => {
     let charString = "";
     morseArray.forEach(morseCode => {
         let morseObj = morseCharArry.find(obj => obj.morseCode == morseCode);
-        charString += morseObj.charKey;
+        if (morseObj == undefined){
+            charString += "CANNOT FIND CODE";
+        }else{
+            charString += morseObj.charKey;
+        }
     });
     return charString;
 }

@@ -62,6 +62,10 @@ describe(translateToMorse,() => {
             const result = translateToChars("----------");
             expect(result).toEqual("INVALID INPUT");
         });
+        it("..--. should translate to CANNOT FIND CODE", () => {
+            const result = translateToChars("..--.");
+            expect(result).toEqual("CANNOT FIND CODE");
+        });
     })
 
 });
