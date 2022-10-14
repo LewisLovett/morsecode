@@ -9,7 +9,9 @@ const handleTranslateBtnClick = () => {
     }else if (document.querySelector("#morseToCharRd").checked){
         document.querySelector("#morse-output").innerHTML = translateToChars(wordInput);
     }
-    
+    if (wordInput.toLowerCase() == "easter egg"){
+        document.querySelector("#morse-output").innerHTML += " Happy now Ollie?" 
+    }
 }
 
 document.querySelector("#translateBtn").addEventListener("click",handleTranslateBtnClick);
