@@ -21,9 +21,9 @@ describe(translateToMorse,() => {
         expect(result).toEqual("-... .- -");
     });
 
-    it("5 should translate to ....", () => {
+    it("5 should translate to .....", () => {
         const result = translateToMorse(5);
-        expect(result).toEqual("....");
+        expect(result).toEqual(".....");
     });
 
     it("& should translate to .-...", () => {
@@ -34,13 +34,13 @@ describe(translateToMorse,() => {
         const result = translateToMorse("");
         expect(result).toEqual("");
     });
-    it("> should translate to invalid", () => {
+    it("> should translate to nothing", () => {
         const result = translateToMorse(">");
-        expect(result).toEqual("invalid");
+        expect(result).toEqual("");
     });
-    it(">p should translate to invalid", () => {
+    it(">p should translate to .--.", () => {
         const result = translateToMorse(">p");
-        expect(result).toEqual("invalid .--.");
+        expect(result).toEqual(".--.");
     });
 
 });
