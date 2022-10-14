@@ -112,3 +112,7 @@ export const translateMorseArray = (morseArray) => {
     return charString;
 }
 
+export const translateToChars = (morseInput) => {
+    const validMorseArray = validMorse(morseInput);    
+    return translateMorseArray(validMorseArray);
+}

@@ -13,6 +13,10 @@
         <h1>English to International Morse Code</h1>
         <p>Please input the word you want to be translated</p>
         <input type="text" id="word-input">
+        <input type="radio" id="charToMorseRd" name="translateType" value="charToMorseRd" checked>
+        <label for="charToMorseRd">Characters to Morse</label>
+        <input type="radio" id="morseToCharRd" name="translateType" value="morseToCharRd">
+        <label for="morseToCharRd">Morse to Characters</label>
         <button id="translateBtn">Click to translate</button>
         <div id="morse-output"></div>
     </div>
