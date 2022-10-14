@@ -43,4 +43,25 @@ describe(translateToMorse,() => {
         expect(result).toEqual(".--.");
     });
 
+    describe(translateToChars,() => {
+        it("-. should translate to N", () => {
+            const result = translateToChars("-.");
+            expect(result).toEqual("N");
+        });
+        it("--- ... should translate to OS", () => {
+            const result = translateToChars("--- ...");
+            expect(result).toEqual("OS");
+        });
+
+        it("FJSn 54 should translate to IVALID INPUT", () => {
+            const result = translateToChars("FJSn 54");
+            expect(result).toEqual("INVALID INPUT");
+        });
+
+        it("---------- should translate to IVALID INPUT", () => {
+            const result = translateToChars("----------");
+            expect(result).toEqual("INVALID INPUT");
+        });
+    })
+
 });
