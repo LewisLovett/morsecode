@@ -1,8 +1,8 @@
-const lettersToMorse = (wordInput) => {
+const filterValidChars = (wordInput) => {
     const wordArry = wordInput.split("");
     const regFilter = new RegExp( `([A-Z0-9&'@)(:,=!.%+"?/])`, `gi`)
     const filteredWordArray = wordArry.filter((arryChar) => arryChar.match(regFilter));
-    console.log(filteredWordArray);
+    return filteredWordArray;
 }
 
 lettersToMorse("bobby &&>HUdfuehgIO@~>?@:L{)");
