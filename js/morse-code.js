@@ -61,7 +61,7 @@ export const filterValidChars = (wordInput) => {
     return filteredWordArray;
 }
 
-export const translateArray = (charsArray) => {
+export const translateCharArray = (charsArray) => {
     let morseString = "";
     charsArray.forEach(wordChar => {
         wordChar = wordChar.toUpperCase();
@@ -75,15 +75,16 @@ export const translateArray = (charsArray) => {
 
 export const translateToMorse = (wordInput) => {
     const filteredWordArray = filterValidChars(wordInput);    
-    return translateArray(filteredWordArray);
+    return translateCharArray(filteredWordArray);
 }
+
 
 export const validMorse = (morseInput) => {
     morseInput = String(morseInput);
     const morstArry = morseInput.split(" ");
     const regFilter = new RegExp( `([^. -])`, `gi`);
     let validInput = true;
-    
+
     if(!regFilter.test(morseInput)){
         morstArry.forEach(morseCode => {
             if (morseCode.length == 1 || morseCode.length > 6){
@@ -101,3 +102,13 @@ export const validMorse = (morseInput) => {
         return "INVALID INPUT";
     }
 }
+
+export const translateMorseArray = (morseArray) => {
+    let charString = "";
+    morseArray.forEach(morseCode => {
+        let morseObj = morseCharArry.find(obj => obj.morseCode == morseCode);
+        charString += morseObj.charKey;
+    });
+    return charString;
+}
+
