@@ -43,7 +43,7 @@ export const translateArray = (charsArray) => {
         morseString += " "
 
     });
-    return morseString;
+    return morseString.trim();
 }
 
 export const translateToMorse = (wordInput) => {
