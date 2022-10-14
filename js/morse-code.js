@@ -113,6 +113,12 @@ export const translateMorseArray = (morseArray) => {
 }
 
 export const translateToChars = (morseInput) => {
-    const validMorseArray = validMorse(morseInput);    
-    return translateMorseArray(validMorseArray);
+    const validMorseArray = validMorse(morseInput);
+    let htmlOutput =  "";
+    if (validMorseArray != "INVALID INPUT"){
+        htmlOutput = translateMorseArray(validMorseArray);
+    }else{
+        htmlOutput = "INVALID INPUT"
+    }
+    return htmlOutput;
 }

@@ -1,4 +1,4 @@
-const {translateToMorse} = require('./morse-code.js');
+const {translateToMorse,translateToChars} = require('./morse-code.js');
 
 describe(translateToMorse,() => {
     it("B should translate to -...", () => {
