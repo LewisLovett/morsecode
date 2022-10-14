@@ -77,3 +77,27 @@ export const translateToMorse = (wordInput) => {
     const filteredWordArray = filterValidChars(wordInput);    
     return translateArray(filteredWordArray);
 }
+
+export const validMorse = (morseInput) => {
+    morseInput = String(morseInput);
+    const morstArry = morseInput.split(" ");
+    const regFilter = new RegExp( `([^. -])`, `gi`);
+    let validInput = true;
+    
+    if(!regFilter.test(morseInput)){
+        morstArry.forEach(morseCode => {
+            if (morseCode.length == 1 || morseCode.length > 6){
+                validInput = false;
+            }
+        }) 
+    }else{
+        validInput = false;
+    }
+
+
+    if (validInput){
+        return morstArry;
+    }else{
+        return "INVALID INPUT";
+    }
+}
