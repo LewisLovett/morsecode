@@ -10,6 +10,9 @@ body{
     background-color: $primaryColor;
     color: $secondaryColor;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .translatorContainer{
@@ -47,4 +50,20 @@ p{
 
 #morse-output{
     font-size: 3em;
+}
+
+.inventorImg{
+    width: 200px;
+    margin: 10px;
+    border: 5px gray solid;
+}
+
+@media (min-width:768px){
+    body{
+        flex-direction: row;
+    }
+
+    .inventorImg{
+        width: 400px;
+    }
 }
