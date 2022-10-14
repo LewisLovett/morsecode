@@ -1,0 +1,50 @@
+@use 'colors' as *;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.translatorContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    padding: 2px;
+}
+p{
+    font-size: 2em;
+    color: $tertiaryColor;
+    padding: 5px;
+}
+
+#word-input{
+    font-size: 2em;
+    background-color: $tertiaryColor;
+    color: $primaryColor;
+    border: 2px $secondaryColor solid;
+    padding: 10px;
+}
+
+#translateBtn{
+    font-size: 2em;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    margin: 10px;
+    padding: 10px;
+}
+
+#morse-output{
+    font-size: 3em;
+}

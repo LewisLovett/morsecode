@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #818479;
+  color: #D2E4C4;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.translatorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  padding: 2px;
+}
+
+p {
+  font-size: 2em;
+  color: #E7E08B;
+  padding: 5px;
+}
+
+#word-input {
+  font-size: 2em;
+  background-color: #E7E08B;
+  color: #818479;
+  border: 2px #D2E4C4 solid;
+  padding: 10px;
+}
+
+#translateBtn {
+  font-size: 2em;
+  background-color: #D2E4C4;
+  color: #818479;
+  margin: 10px;
+  padding: 10px;
+}
+
+#morse-output {
+  font-size: 3em;
+}/*# sourceMappingURL=styles.css.map */

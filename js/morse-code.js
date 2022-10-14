@@ -65,7 +65,7 @@ export const translateArray = (charsArray) => {
     let morseString = "";
     charsArray.forEach(wordChar => {
         wordChar = wordChar.toUpperCase();
-        let morseObj = morseCharArry.find(o => o.charKey == wordChar);
+        let morseObj = morseCharArry.find(obj => obj.charKey == wordChar);
         morseString += morseObj.morseCode;
         morseString += " "
 
