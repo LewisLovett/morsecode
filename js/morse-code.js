@@ -77,10 +77,3 @@ export const translateToMorse = (wordInput) => {
     const filteredWordArray = filterValidChars(wordInput);    
     return translateArray(filteredWordArray);
 }
-
-const handleTranslateBtnClick = () => {
-    const wordInput = document.querySelector("#word-input").value;
-    document.querySelector("#morse-output").innerHTML = translateToMorse(wordInput);;
-}
-
-document.querySelector("#translateBtn").addEventListener("click",handleTranslateBtnClick);
